@@ -9,17 +9,15 @@ app.use(
   })
 );
 app.use(express.json());
-//app.use(bodyParser.urlencoded({ extended: false }));
-//console.log("Equipos : ", Equipos.Equipo3[0]);
-//app.use(bodyParser.text({ type: "text/*" }));
 
 app.post("*", function (req, res) {
   res.sendStatus(200);
 
   console.log("************************************************");
+  req.body.tags.map((tag) => console.log(tag.fields));
+  console.log("||||||||||||||||||||||||||||||||||||||||||||||||");
   console.log(req.body);
   console.log("================================================");
-
 });
 
 app.listen(PORT, function () {
