@@ -1,7 +1,7 @@
 //const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8081;
 
 app.use(
   express.urlencoded({
@@ -10,7 +10,7 @@ app.use(
 );
 app.use(express.json());
 
-app.post("*", function (req, res) {
+app.post("/WSAntenasCedis/API/CEDIS/registro_equipos/", function (req, res) {
   res.sendStatus(200);
 
   console.log("************************************************");
