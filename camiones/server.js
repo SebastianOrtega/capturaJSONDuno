@@ -1,7 +1,7 @@
 //const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8001;
 
 app.use(
   express.urlencoded({
@@ -15,7 +15,7 @@ app.post("*", function (req, res) {
 
   console.log("************************************************");
  // req.body.tags?.map((tag) => console.log(tag.fields)); 
-  req.body.tags.map((tag) => console.log(tag.fields));
+ // req.body.tags.map((tag) => console.log(tag.fields));
   console.log("||||||||||||||||||||||||||||||||||||||||||||||||");
   console.log(req.body);
   console.log("================================================");
